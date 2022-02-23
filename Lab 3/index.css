@@ -1,0 +1,35 @@
+html, body, #fullheight {
+    min-height: 100% !important;
+    height: 100%;
+}
+
+#search-box {
+    height:5%;
+    font-size: 20px;
+    display: block;
+}
+
+#map {
+    height: 95%;
+    display: block;
+}
+
+#vehicle-incident-map {
+    height: 95%;
+    display: block;
+}
+
+#from-date,#to-date,#search-button {
+    font-size: 18px;
+}
+
+#result {
+    margin-left: 20px;
+}
+
+#traffic-incidents {
+    font-size: 25px;
+    display: none;
+    text-align: center;
+    margin-bottom: 5px;
+}

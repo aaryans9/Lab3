@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+		<meta charset="utf-8" />
+        <title>Geoweb application</title>
+		<link rel="stylesheet" crossorigin=""
+				href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js"
+						crossorigin=""></script>
+        <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier-Leaflet/0.2.6/oms.min.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
+        <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+        <link rel="stylesheet" href="index.css" />
+	</head>
+
+	<body>
+        <div style="display: inline-block;width: 100%;">
+            <div style="float: left;">
+                <div id="search-box">
+                    <span>
+                        <b>Search Building permits by date :</b>
+                    </span>
+                    <span>
+                        <input id = "from-date" type="date">
+                        <span style = "margin-left: 5px;margin-right: 5px;">to</span>
+                        <input id = "to-date" type="date">
+                    </span>
+                    <button id = "search-button" onClick = "handleSearchButtonClick()">Search</button>
+                    <span id="result"></span>
+                </div>
+                <div id="traffic-incidents">
+                    <b>2017 Calgary Traffic Incidents</b>
+                </div>
+            </div>
+            <!-- Lab 3 -->
+            <div style="float:right;font-size: 15px;">
+                <label for="building-permits">
+                    <input 
+                        type="radio" 
+                        id="building-permits" 
+                        value="building-permits"
+                        onclick="handleToggleButton('building-permits')"
+                        name="building-permits"
+                    >
+                    <b>Search Building Permits</b>
+                </label>
+                <label for="vehicle-incidents">
+                    <input 
+                        type="radio" 
+                        id="vehicle-incidents" 
+                        value="vehicle-incidents"
+                        onclick="handleToggleButton('vehicle-incidents')"
+                        name="vehicle-incidents"
+                    >
+                    <b>View 2017 Traffic Incidents</b>
+                </label>
+                
+            </div>
+        </div>
+		<div id="map"></div>
+	</body>
+    <script src="index.js"></script>
+</html>
